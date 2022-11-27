@@ -1,0 +1,147 @@
+/*Подключаем файлы шрифтов*/
+@font-face {
+  font-family: "Cyberpunk";
+  font-weight: normal;
+  src: url("Fonts/cyberpunk.woff") format("woff");
+}
+@font-face {
+  font-family: "Blender";
+  font-weight: normal;
+  src: url("Fonts/BlenderPro-Medium.woff") format("woff");
+}
+/*Обнуляем отступы*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Blender;
+}
+body {
+  display: flex;
+  flex-direction: column;
+
+  background-image: url("Bg/bg.png");
+  background-position: center;
+  background-size: cover;
+
+  font-size: 22px;
+}
+/*Шапка*/
+.header {
+  display: flex;
+  min-height: 130px;
+  background-color: black;
+}
+/*Лого на шапке*/
+.logo {
+  margin: auto;
+  font-size: 60px;
+  color: yellow;
+  font-family: Cyberpunk;
+  text-align: center;
+}
+/*Инфо*/
+.info {
+  text-align: center;
+  height: auto;
+  margin-top: 20px;
+  font-size: 30px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.phone {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 7px 7px 4px black;
+  font-weight: bold;
+}
+/*Сетка с преимуществами*/
+.grid {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height: auto;
+}
+.benefits {
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 7px 7px 4px black;
+  margin: 30px;
+  overflow: hidden;
+
+  width: 290px;
+  height: 250px;
+
+  text-align: center;
+}
+
+.benefits img {
+  height: 175px;
+}
+/*Подвал*/
+.footer {
+  position: fixed;
+  bottom: 0;
+  min-height: 100px;
+  width: 100vw;
+  background-color: black;
+  color: white;
+}
+.footer_text {
+  font-size: 16px;
+
+  margin-left: 25px;
+}
+/*Кнопка тарифов*/
+.button {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.button a {
+  text-decoration: none;
+  color: white;
+  transition: 0.5s;
+}
+.button a:hover {
+  color: yellow;
+}
+/*Таблица тарифов*/
+.tariffs {
+  display: flex;
+  height: 50vh;
+}
+.tariffs table {
+  text-align: center;
+  border: 1px solid black;
+  margin: auto;
+  box-shadow: 7px 7px 4px black;
+}
+td,
+th {
+  border: 1px solid black;
+  text-align: center;
+  width: 205px;
+}
+/*Адаптация для маленьких разрешений/размеров окон*/
+@media screen and (max-width: 800px) {
+  .benefits:last-child {
+    margin-bottom: 200px;
+  }
+  .logo {
+    font-size: 45px;
+  }
+  .info {
+    font-size: 25px;
+  }
+}
+@media screen and (max-height: 800px) {
+  .benefits:last-child {
+    margin-bottom: 200px;
+  }
+  .tariffs {
+    margin-bottom: 100px;
+  }
+}
